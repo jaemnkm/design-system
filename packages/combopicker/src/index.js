@@ -1,1 +1,1 @@
-export { default as ComboPicker } from './ComboPicker.js'
+export { default as ComboPicker } from './NumberPicker.js'
