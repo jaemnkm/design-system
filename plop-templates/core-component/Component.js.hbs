@@ -1,13 +1,28 @@
-import React from 'react'
-
 import styled from 'styled-components'
-import { Box, Text, Heading } from 'pcln-design-system'
+import PropTypes from 'prop-types'
+import {
+  space,
+  themeGet
+} from 'styled-system'
+import {
+  mapProps,
+  applyVariations,
+  getPaletteColor
+} from './utils'
 
-const {{componentName}} = (props) => {
-  return (<Box>
-    <Heading>Hello Priceline!</Heading>
-    <Heading.h2>Completed new component scaffold: {{componentName}}</Heading.h2>
-  </Box>)
+const {{componentName}} = mapProps(({ align, ...props }) => ({
+  ...props
+}))(styled.{{htmlTag}}`
+  // Example: Use palette colors
+  color: ${getPaletteColor('base')};
+
+  // Advanced: Apply variation style along with custom styling from theme.componentStyles[component][variation]
+  ${applyVariations('Text')}
+`)
+
+{{componentName}}.displayName = '{{componentName}}'
+
+{{componentName}}.propTypes = {
 }
 
 export default {{componentName}}

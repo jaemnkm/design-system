@@ -1,6 +1,5 @@
 module.exports = function(plop) {
   // create your generators here
-
   plop.setGenerator('core', {
     description: 'Create new core component',
     prompts: [
@@ -8,6 +7,11 @@ module.exports = function(plop) {
         type: 'input',
         name: 'componentName',
         message: 'Please enter component name (ProperCase)'
+      },
+      {
+        type: 'input',
+        name: 'htmlTag',
+        message: 'Please enter HTML tag name (e.g. div)'
       }
     ], // array of inquirer prompts
     actions: [
