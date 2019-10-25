@@ -1,5 +1,4 @@
 module.exports = function(plop) {
-  // create your generators here
   plop.setGenerator('core', {
     description: 'Create new core component',
     prompts: [
@@ -13,44 +12,44 @@ module.exports = function(plop) {
         name: 'htmlTag',
         message: 'Please enter HTML tag name (e.g. div)'
       }
-    ], // array of inquirer prompts
+    ],
     actions: [
       {
         type: 'add',
         path: 'packages/core/src/{{componentName}}.js',
-        templateFile: 'plop-templates/core-component/Component.js.hbs'
+        templateFile: 'plop-templates/core/Component.js.hbs'
       },
       {
         type: 'add',
         path: 'packages/core/test/{{componentName}}.js',
-        templateFile: 'plop-templates/core-component/Test.js.hbs'
+        templateFile: 'plop-templates/core/Test.js.hbs'
       },
       {
         type: 'add',
         path: 'packages/core/storybook/{{componentName}}.js',
-        templateFile: 'plop-templates/core-component/Story.js.hbs'
+        templateFile: 'plop-templates/core/Story.js.hbs'
       }
-    ] // array of actions
+    ]
   })
 
-  plop.setGenerator('sub', {
-    description: 'Create new sub-module',
+  plop.setGenerator('package', {
+    description: 'Create new package',
     prompts: [
       {
         type: 'input',
         name: 'componentName',
         message: 'Please enter component name (ProperCase)'
       }
-    ], // array of inquirer prompts
+    ],
     actions: [
       {
         type: 'addMany',
-        base: 'plop-templates/sub-component',
+        base: 'plop-templates/package',
         destination: 'packages/{{kebabCase componentName}}',
         path: '{{componentName}}.js',
-        templateFiles: 'plop-templates/sub-component/**',
+        templateFiles: 'plop-templates/package/**',
         stripExtensions: ['hbs']
       }
-    ] // array of actions
+    ]
   })
 }

@@ -76,6 +76,17 @@ update its snapshot:
 npm test -- -u
 ```
 
+### Creating new components
+
+We use [Plop](https://plopjs.com/) to scaffold new components rather than copy/pasting a boilerplate.
+The configuration allows you to create new core and package components.
+Follow the steps below to create a new component:
+
+1. Run `npm run plop` and follow the prompts
+1. Run `npm run prepare` to tell Lerna to bootstrap your new component folder
+1. If creating a core component, add an export for your new component to `packages/core/src/index.js`
+1. Start working!
+
 ### Storybook
 
 We use [Storybook][storybook] for isolated UI component development.
