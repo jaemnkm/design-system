@@ -17,7 +17,7 @@ const {{componentName}} = mapProps(({ align, ...props }) => ({
   color: ${getPaletteColor('base')};
 
   // Advanced: Apply variation style along with custom styling from theme.componentStyles[component][variation]
-  ${applyVariations('Text')}
+  ${applyVariations('{{componentName}}')}
 `)
 
 {{componentName}}.displayName = '{{componentName}}'
