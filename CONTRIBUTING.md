@@ -84,7 +84,7 @@ Follow the steps below to create a new component:
 
 1. Run `npm run plop` and follow the prompts
 1. Run `npm run prepare` to tell Lerna to bootstrap your new component folder
-1. If creating a core component, add an export for your new component to `packages/core/src/index.js`
+3. If creating a core component, add an import & an export for the new core component in `packages/core/src/index.js` file
 1. Start working!
 
 ### Storybook
