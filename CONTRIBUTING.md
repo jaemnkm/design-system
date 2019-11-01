@@ -78,7 +78,7 @@ npm test -- -u
 
 ### Creating new components
 
-We use [Plop](https://plopjs.com/) to scaffold new components rather than copy/pasting a boilerplate.
+We use [Plop](https://plopjs.com/) to scaffold new components rather than copying & pasting from a boilerplate.
 The configuration allows you to create new core and package components.
 Follow the steps below to create a new component:
 
